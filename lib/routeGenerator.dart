@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:order_now/Screens/homePage.dart';
 import 'package:order_now/Screens/mainScreen.dart';
 import 'package:order_now/Screens/signInScreen.dart';
 import 'package:order_now/Screens/signUpScreen.dart';
@@ -17,6 +18,8 @@ class RouteGenerator {
 				return MaterialPageRoute(builder: (_) => SignUpScreen());
 			case '/mainScreen':
 				return MaterialPageRoute(builder: (_) => MainScreen());
+			case '/homePage':
+				return MaterialPageRoute(builder: (_) => HomePage());
 				// If args is not of the correct type, return an error page.
 				// You can also throw an exception while in development.
 				return _errorRoute();
