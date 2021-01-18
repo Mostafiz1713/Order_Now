@@ -138,7 +138,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     color: Themes.signUpButton,
                   ),
                   child: FlatButton(
-                    onPressed: () => Navigator.of(context).pushNamed('/'),
+                    onPressed: () => Navigator.of(context).pushNamed('/signInScreen'),
                     child: Text(
                       "Sign Up",
                       style: TextStyle(
@@ -168,7 +168,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     ),
                     InkWell(
                       onTap: () {
-                        Navigator.of(context).pushNamed('/');
+                        Navigator.of(context).pushNamed('/signInScreen');
                       },
                       child: Text(
                         "Sign In",

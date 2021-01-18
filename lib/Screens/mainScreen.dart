@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:order_now/Screens/homePage.dart';
 import 'package:order_now/Screens/orderPage.dart';
 
@@ -8,6 +9,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  var message = 'Do you really want close?';
   int currentIndex = 0;
   List<Widget> pages;
 
@@ -15,13 +17,20 @@ class _MainScreenState extends State<MainScreen> {
   HomePage homePage;
   OrderPage orderPage;
 
+  Widget _getIcon() {
+    if (currentIndex > 0)
+      return Icon(Icons.arrow_back_ios);
+    else
+      return Icon(Icons.exit_to_app);
+  }
+
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     homePage = HomePage();
     orderPage = OrderPage();
-    pages = [homePage,orderPage];
+    pages = [homePage, orderPage];
     currentPage = homePage;
   }
 
@@ -29,21 +38,29 @@ class _MainScreenState extends State<MainScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: IconButton(icon: Icon(Icons.arrow_back_ios), onPressed: () => Navigator.of(context).pushNamed('/mainScreen')),
-      ),
+          leading: IconButton(
+              icon: _getIcon(),
+              onPressed: () {
+                if (currentIndex == 0) {
+                  SystemNavigator.pop();
+                } else {
+                  Navigator.of(context).pushNamed('/mainScreen');
+                }
+              })),
       endDrawer: Drawer(),
       body: currentPage,
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: currentIndex,
-        onTap: (int index){
+        onTap: (int index) {
           setState(() {
             currentIndex = index;
             currentPage = pages[index];
           });
         },
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home),title: Text('Home')),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), title: Text('Order')),
+          BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home')),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart), title: Text('Order')),
         ],
       ),
     );

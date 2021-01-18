@@ -17,8 +17,7 @@ class _HomeTopWidgetState extends State<HomeTopWidget> {
   Widget build(BuildContext context) {
     return Container(
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Text(
             "What would you like to eat ?",

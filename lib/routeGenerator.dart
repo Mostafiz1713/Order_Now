@@ -3,6 +3,7 @@ import 'package:order_now/Screens/homePage.dart';
 import 'package:order_now/Screens/mainScreen.dart';
 import 'package:order_now/Screens/signInScreen.dart';
 import 'package:order_now/Screens/signUpScreen.dart';
+import 'package:order_now/Screens/splashScreen.dart';
 
 class RouteGenerator {
 	static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -11,7 +12,7 @@ class RouteGenerator {
 
 		switch (settings.name) {
 			case '/':
-				return MaterialPageRoute(builder: (_) => SignInScreen());
+				return MaterialPageRoute(builder: (_) => SplashScreen());
 			case '/signInScreen':
 				return MaterialPageRoute(builder: (_) => SignInScreen());
 			case '/signUpScreen':
