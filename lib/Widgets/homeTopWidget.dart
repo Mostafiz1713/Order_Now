@@ -8,7 +8,6 @@ class HomeTopWidget extends StatefulWidget {
 
 class _HomeTopWidgetState extends State<HomeTopWidget> {
   final textstyle = TextStyle(
-    fontSize: 28.0,
     color: Themes.whiteText,
     fontWeight: FontWeight.bold,
   );
@@ -21,7 +20,7 @@ class _HomeTopWidgetState extends State<HomeTopWidget> {
         children: [
           Text(
             "What would you like to eat ?",
-            style: textstyle,
+            style: Theme.of(context).textTheme.headline6,
           ),
         ],
       ),

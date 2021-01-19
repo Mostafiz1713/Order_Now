@@ -12,9 +12,8 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
     return Material(
 			borderRadius: BorderRadius.circular(20.0),
 			elevation: 5.0,
-
 			child: TextField(
-				decoration: InputDecoration(
+        decoration: InputDecoration(
 					hintText: "Search any food",
 					suffixIcon: Material(
 						elevation: 5.0,

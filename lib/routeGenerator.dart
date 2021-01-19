@@ -4,6 +4,7 @@ import 'package:order_now/Screens/mainScreen.dart';
 import 'package:order_now/Screens/signInScreen.dart';
 import 'package:order_now/Screens/signUpScreen.dart';
 import 'package:order_now/Screens/splashScreen.dart';
+import 'package:order_now/Widgets/foodCategoryWidget.dart';
 
 class RouteGenerator {
 	static Route<dynamic> generateRoute(RouteSettings settings) {
@@ -21,6 +22,8 @@ class RouteGenerator {
 				return MaterialPageRoute(builder: (_) => MainScreen());
 			case '/homePage':
 				return MaterialPageRoute(builder: (_) => HomePage());
+			case '/foodCategory':
+				return MaterialPageRoute(builder: (_) => FoodCategoryWidget());
 				// If args is not of the correct type, return an error page.
 				// You can also throw an exception while in development.
 				return _errorRoute();

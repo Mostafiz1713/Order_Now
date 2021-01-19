@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:order_now/Constants/themes.dart';
+import 'package:order_now/Widgets/foodCategoryWidget.dart';
 import 'package:order_now/Widgets/homeTopWidget.dart';
 import 'package:order_now/Widgets/searchBarWidget.dart';
 
@@ -21,6 +22,7 @@ class _HomePageState extends State<HomePage> {
             height: 15.0,
           ),
           SearchBarWidget(),
+          FoodCategoryWidget(),
         ],
       ),
     );
