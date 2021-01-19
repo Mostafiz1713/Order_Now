@@ -20,7 +20,7 @@ class _HomeTopWidgetState extends State<HomeTopWidget> {
         children: [
           Text(
             "What would you like to eat ?",
-            style: Theme.of(context).textTheme.headline6,
+            style: Theme.of(context).textTheme.headline6.copyWith(color: Themes.whiteText),
           ),
         ],
       ),

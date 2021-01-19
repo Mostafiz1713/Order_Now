@@ -1,7 +1,7 @@
 class FoodCategoryModel{
 	String categoryName;
 	String categoryImage;
-	int noOfCategoryItem;
+	String categoryPrice;
 
-	FoodCategoryModel({this.categoryName, this.categoryImage, this.noOfCategoryItem});
+	FoodCategoryModel({this.categoryName, this.categoryImage, this.categoryPrice});
 }
